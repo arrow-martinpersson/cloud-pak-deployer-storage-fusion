@@ -26,7 +26,7 @@ cp4d:
   # - watsonx-gov-rc
   # - watsonx-orchestrate
   cp4d_production_license: True
-  accept_licenses: False
+  accept_licenses: True
   db2u_limited_privileges: False
   use_fs_iam: True
   operators_project: cpd-operators
@@ -269,7 +269,7 @@ cp4d:
   # OpenShift AI is a requirement for watsonx.ai. You can install this by setting the openshift.openshift_ai.install property to True
   - name: watsonx_ai
     description: watsonx.ai
-    state: removed
+    state: installed
     installation_options:
       tuning_disabled: true
     models:
@@ -292,7 +292,7 @@ cp4d:
     - model_id: ibm-granite-8b-japanese
       state: removed
     - model_id: ibm-granite-13b-chat-v2
-      state: removed
+      state: installed
     - model_id: ibm-granite-13b-instruct-v2
       state: removed
     - model_id: ibm-granite-20b-multilingual
@@ -332,7 +332,7 @@ cp4d:
     - model_id: llama-3-1-8b-instruct
       state: removed
     - model_id: llama-3-1-70b-instruct
-      state: removed
+      state: installed
     - model_id: llama-3-405b-instruct
       state: removed
     - model_id: meta-llama-llama-3-8b-instruct
@@ -357,17 +357,17 @@ cp4d:
       state: removed
     # Embedding models
     - model_id: all-minilm-l6-v2
-      state: removed
+      state: installed
     - model_id: all-minilm-l12-v2
-      state: removed
+      state: installed
     - model_id: ms-marco-minilm-l-12-v2
-      state: removed
+      state: installed
     - model_id: multilingual-e5-large
-      state: removed
+      state: installed
     - model_id: slate-30m-english-rtrvr-v2
-      state: removed
+      state: installed
     - model_id: slate-125m-english-rtrvr-v2
-      state: removed
+      state: installed
       
   - name: watsonx_data
     description: watsonx.data
@@ -447,12 +447,12 @@ cp4d:
     description: Watson Studio Runtimes
     runtimes:
     - ibm-cpd-ws-runtime-241-py
-    - ibm-cpd-ws-runtime-231-py
-    - ibm-cpd-ws-runtime-241-pygpu
-    - ibm-cpd-ws-runtime-231-pygpu
+    #- ibm-cpd-ws-runtime-231-py
+    #- ibm-cpd-ws-runtime-241-pygpu
+    #- ibm-cpd-ws-runtime-231-pygpu
     - ibm-cpd-ws-runtime-241-r
-    - ibm-cpd-ws-runtime-231-r
-    state: removed 
+    #- ibm-cpd-ws-runtime-231-r
+    state: installed 
 
 #
 # Cartridges where extra work is needed (will not install automatically)
