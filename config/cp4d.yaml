@@ -116,20 +116,20 @@ cp4d:
     description: Db2 OLTP
     size: small
     instances:
-    - name: ca-metastore
+    - name: openscale-db2
       metadata_size_gb: 20
       data_size_gb: 20
       backup_size_gb: 20  
       transactionlog_size_gb: 20
-    state: removed
+    state: installed
 
   - name: db2wh
     description: Db2 Warehouse
-    state: removed
+    state: installed
 
   - name: dmc
     description: Db2 Data Management Console
-    state: removed
+    state: installed
     instances:
     - name: data-management-console
       description: Data Management Console
@@ -186,7 +186,7 @@ cp4d:
   - name: mantaflow
     description: MANTA Automated Lineage
     size: small
-    state: removed
+    state: installed
 
   - name: match360
     description: IBM Match 360
@@ -196,7 +196,7 @@ cp4d:
 
   - name: mongodb
     description: MongoDB for Cloud Pak for Data
-    state: removed
+    state: installed
     
   - name: openpages
     description: OpenPages
@@ -236,10 +236,10 @@ cp4d:
     size: small
     # noobaa_account_secret: noobaa-admin
     # noobaa_cert_secret: noobaa-s3-serving-cert
-    state: removed
-    instances:
-    - name: wa-instance
-      description: "Watson Assistant instance"
+    state: installed
+    instances: []
+    #- name: wa-instance
+    #  description: "Watson Assistant instance"
 
   - name: watson-discovery
     description: Watson Discovery
@@ -269,7 +269,7 @@ cp4d:
   # OpenShift AI is a requirement for watsonx.ai. You can install this by setting the openshift.openshift_ai.install property to True
   - name: watsonx_ai
     description: watsonx.ai
-    state: installed
+    state: removed
     installation_options:
       tuning_disabled: true
     models:
@@ -292,7 +292,7 @@ cp4d:
     - model_id: ibm-granite-8b-japanese
       state: removed
     - model_id: ibm-granite-13b-chat-v2
-      state: installed
+      state: removed
     - model_id: ibm-granite-13b-instruct-v2
       state: removed
     - model_id: ibm-granite-20b-multilingual
@@ -332,7 +332,7 @@ cp4d:
     - model_id: llama-3-1-8b-instruct
       state: removed
     - model_id: llama-3-1-70b-instruct
-      state: installed
+      state: removed
     - model_id: llama-3-405b-instruct
       state: removed
     - model_id: meta-llama-llama-3-8b-instruct
@@ -357,25 +357,25 @@ cp4d:
       state: removed
     # Embedding models
     - model_id: all-minilm-l6-v2
-      state: installed
+      state: removed
     - model_id: all-minilm-l12-v2
-      state: installed
+      state: removed
     - model_id: ms-marco-minilm-l-12-v2
-      state: installed
+      state: removed
     - model_id: multilingual-e5-large
-      state: installed
+      state: removed
     - model_id: slate-30m-english-rtrvr-v2
-      state: installed
+      state: removed
     - model_id: slate-125m-english-rtrvr-v2
-      state: installed
+      state: removed
       
   - name: watsonx_data
     description: watsonx.data
-    state: removed
+    state: installed
 
   - name: watsonx_governance
     description: watsonx.governance
-    state: removed
+    state: installed
     installation_options:
       installType: all
       enableFactsheet: true
@@ -388,7 +388,7 @@ cp4d:
       app_connect_project: ibm-app-connect
       app_connect_case_version: 12.2.1
       app_connect_channel_version: v12.2
-    state: removed
+    state: installed
 
   - name: wca-ansible
     description: watsxonx Code Assistant for Red Hat Ansible Lightspeed
@@ -403,7 +403,7 @@ cp4d:
   - name: wkc
     description: IBM Knowledge Catalog
     size: small
-    state: removed
+    state: installed
     installation_options:
       enableKnowledgeGraph: True
       enableDataQuality: True
@@ -441,7 +441,7 @@ cp4d:
 
   - name: ws-pipelines
     description: Watson Studio Pipelines
-    state: removed
+    state: installed
 
   - name: ws-runtimes
     description: Watson Studio Runtimes
