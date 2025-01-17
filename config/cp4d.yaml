@@ -364,10 +364,12 @@ cp4d:
       state: removed
     - model_id: multilingual-e5-large
       state: removed
-    - model_id: slate-30m-english-rtrvr-v2
+    - model_id: slate-30m-english-rtrvr
       state: removed
-    - model_id: slate-125m-english-rtrvr-v2
+    - model_id: slate-125m-english-rtrvr
       state: removed
+    - model_id: wdu
+      state: installed
       
   - name: watsonx_data
     description: watsonx.data
