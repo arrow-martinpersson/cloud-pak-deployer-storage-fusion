@@ -378,7 +378,7 @@ cp4d:
 
   - name: watsonx_governance
     description: watsonx.governance
-    state: removed
+    state: installed
     installation_options:
       installType: all
       enableFactsheet: true
