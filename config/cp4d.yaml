@@ -23,7 +23,7 @@ cp4d:
   # - watsonx-code-assistant-z
   # - watsonx-data
   # - watsonx-gov-mm
-  # - watsonx-gov-rc
+  - watsonx-gov-rc
   # - watsonx-orchestrate
   cp4d_production_license: True
   accept_licenses: True
