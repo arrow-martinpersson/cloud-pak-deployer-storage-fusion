@@ -21,9 +21,9 @@ cp4d:
   # - watsonx-ai
   # - watsonx-code-assistant-ansible
   # - watsonx-code-assistant-z
-  # - watsonx-data
+  - watsonx-data
   # - watsonx-gov-mm
-  - watsonx-gov-rc
+  # - watsonx-gov-rc
   # - watsonx-orchestrate
   cp4d_production_license: True
   accept_licenses: True
@@ -54,7 +54,7 @@ cp4d:
   - name: analyticsengine 
     description: Analytics Engine Powered by Apache Spark 
     size: small 
-    state: removed
+    state: installed
 
   - name: bigsql
     description: Db2 Big SQL
@@ -374,11 +374,11 @@ cp4d:
       
   - name: watsonx_data
     description: watsonx.data
-    state: removed
+    state: installed
 
   - name: watsonx_governance
     description: watsonx.governance
-    state: installed
+    state: false
     installation_options:
       installType: rcf
       enableFactsheet: false
