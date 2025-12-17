@@ -440,11 +440,11 @@ cp4d:
 
   - name: ws
     description: Watson Studio
-    state: removed
+    state: installed
 
   - name: ws-pipelines
     description: Watson Studio Pipelines
-    state: removed
+    state: installed
 
   - name: ws-runtimes
     description: Watson Studio Runtimes
@@ -455,7 +455,7 @@ cp4d:
     #- ibm-cpd-ws-runtime-231-pygpu
     - ibm-cpd-ws-runtime-241-r
     #- ibm-cpd-ws-runtime-231-r
-    state: removed 
+    state: installed 
 
 #
 # Cartridges where extra work is needed (will not install automatically)
