@@ -21,9 +21,9 @@ cp4d:
   # - watsonx-ai
   # - watsonx-code-assistant-ansible
   # - watsonx-code-assistant-z
-  - watsonx-data
+  # - watsonx-data
   # - watsonx-gov-mm
-  # - watsonx-gov-rc
+  - watsonx-gov-rc
   # - watsonx-orchestrate
   cp4d_production_license: True
   accept_licenses: True
@@ -54,7 +54,7 @@ cp4d:
   - name: analyticsengine 
     description: Analytics Engine Powered by Apache Spark 
     size: small 
-    state: installed
+    state: removed
 
   - name: bigsql
     description: Db2 Big SQL
@@ -374,11 +374,11 @@ cp4d:
       
   - name: watsonx_data
     description: watsonx.data
-    state: installed
+    state: removed
 
   - name: watsonx_governance
     description: watsonx.governance
-    state: removed
+    state: installed
     installation_options:
       installType: rcf
       enableFactsheet: false
@@ -440,11 +440,11 @@ cp4d:
 
   - name: ws
     description: Watson Studio
-    state: installed
+    state: removed
 
   - name: ws-pipelines
     description: Watson Studio Pipelines
-    state: installed
+    state: removed
 
   - name: ws-runtimes
     description: Watson Studio Runtimes
@@ -455,7 +455,7 @@ cp4d:
     #- ibm-cpd-ws-runtime-231-pygpu
     - ibm-cpd-ws-runtime-241-r
     #- ibm-cpd-ws-runtime-231-r
-    state: installed 
+    state: removed 
 
 #
 # Cartridges where extra work is needed (will not install automatically)
