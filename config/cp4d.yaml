@@ -31,6 +31,8 @@ cp4d:
   use_fs_iam: True
   change_node_settings: False
   operators_project: cpd-operators
+  ibm_cert_manager: False
+  install_day0_patch: True
   state: installed
   cartridges:
   - name: cp-foundation
