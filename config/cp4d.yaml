@@ -18,12 +18,12 @@ cp4d:
   # - text-to-speech
   # - watson-assistant
   # - watson-discovery
-  # - watsonx-ai
+  - watsonx-ai
   # - watsonx-code-assistant-ansible
   # - watsonx-code-assistant-z
   # - watsonx-data
   # - watsonx-gov-mm
-  - watsonx-gov-rc
+  #- watsonx-gov-rc
   # - watsonx-orchestrate
   cp4d_production_license: True
   accept_licenses: True
@@ -272,7 +272,7 @@ cp4d:
   # OpenShift AI is a requirement for watsonx.ai. You can install this by setting the openshift.openshift_ai.install property to True
   - name: watsonx_ai
     description: watsonx.ai
-    state: removed
+    state: installed
     installation_options:
       tuning_disabled: true
     models:
@@ -380,7 +380,7 @@ cp4d:
 
   - name: watsonx_governance
     description: watsonx.governance
-    state: installed
+    state: removed
     installation_options:
       installType: rcf
       enableFactsheet: false
